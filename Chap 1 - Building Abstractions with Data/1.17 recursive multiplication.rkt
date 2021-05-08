@@ -1,0 +1,16 @@
+#lang sicp
+(define (even? x)
+  (= (remainder x 2) 0)
+)
+(define (double x) (* x 2))
+(define (fast-mul x y)
+  (cond ((= y 1) x)
+        ((even? y) (double (fast-mul x (/ y 2))))
+        (else (+ x (fast-mul x (- y 1)))))
+)
+;test
+(fast-mul 2 11)
+(fast-mul 10 3)
+(fast-mul 10 10)
+(fast-mul 10 12)
+(fast-mul 10 13)
