@@ -1,0 +1,12 @@
+#lang sicp
+(define (fringe items)  
+(define (fringe-iter items result) 
+ (cond ((null? items) 
+        result) 
+       ((pair? items) 
+        (fringe-iter (car items) 
+                     (fringe-iter (cdr items) result))) 
+       (else (cons items result)))) 
+(fringe-iter items nil)) 
+  
+(fringe (list (list 1 2) (list 3 4 (list 5 (list 6))))) 
