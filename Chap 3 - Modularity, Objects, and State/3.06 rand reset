@@ -1,0 +1,11 @@
+#lang scheme
+(define (rand operation)
+  (define random-init 10)
+  (let ((x random-init))
+    (cond ((eq? operation 'generate) ((lambda ()
+                                       (set! x (rand-update x))
+                                       x)))
+          ((eq? operation 'reset) (lambda (new-seed)
+                                    (set! x new-seed)
+                                    x))
+          (else (error "Invalid operation" operation)))))

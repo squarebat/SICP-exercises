@@ -1,0 +1,15 @@
+#lang sicp
+(define (cycle? lst)
+  (define (cycle-iter lst ptr1 ptr2)
+    (cond ((or (null? lst) (null? (cdr lst))) #f)
+          ((eq? ptr1 ptr2) #t)
+          (else (cycle-iter (cdr lst) (car lst) (cadr lst)))))
+  (cycle-iter lst '(1) '(2))) ;'(1) '(2) are pointer initializers. They can be any two distinct symbols.  
+
+;test
+(define list1 (list 1 2 3))
+(cycle? list1)
+
+(define list-with-cycle '(foo bar baz)) 
+(set-cdr! (cddr list-with-cycle) list-with-cycle)
+;(cycle? list-with-cycle)
