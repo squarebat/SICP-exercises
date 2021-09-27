@@ -1,0 +1,1 @@
+Louis's version fails because in the abcense of delay, pairs will be called from pairs infinitely, before interleave has a chance to execute.
