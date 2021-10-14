@@ -2,7 +2,7 @@
 
 #### My Emacs install and doom setup
 - `brew install emacs`
-- [Follow doom installtion guide](https://github.com/hlissner/doom-emacs#install)
+- [Follow doom installation guide](https://github.com/hlissner/doom-emacs#install)
 - launch from terminal with `$ emacs`
 - I am on Fedora btw
 
