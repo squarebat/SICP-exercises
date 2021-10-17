@@ -7,7 +7,9 @@ row and index are 1-indexed
 (define (pascals-triangle row index)
   (cond ((> index row) -1)
         ((or (= index 1) (= index row)) 1)
-        ((+ (pascals-triangle  (- row 1) (- index 1)) (pascals-triangle  (- row 1) index)))))    
+        ((+ (pascals-triangle  (- row 1) (- index 1)) (pascals-triangle  (- row 1) index)))
+  )
+)    
 
 (pascals-triangle 1 1)
 (pascals-triangle 2 1)
