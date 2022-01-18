@@ -6,7 +6,7 @@ This allows us to use that variable name in the local scope again, while
 preserving value in the global scope.
 We could however implement both global and local scope removals by supplying an
 extra argument to specify scope, however YIKES, modifying the global scope is dangerous
-100% would not recommend.
+100% would not recommend (or implement).
 |#
 
 ;We'll be using the abstracy form of env-loop from ex 4.12
